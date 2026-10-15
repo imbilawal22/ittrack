@@ -1,0 +1,220 @@
+/* ==========================================================================
+   IT Track Institute - Typing Master
+   Themes & Design Tokens (Modern Color Palettes & System Override)
+   ========================================================================== */
+
+:root {
+  color-scheme: dark light;
+
+  /* Font Families */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* Global Animations */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="dark"]) {
+  color-scheme: dark;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="light"]) {
+  color-scheme: light;
+}
+
+/* ==========================================
+   THEME 1: Cyber Indigo (Default Dark Pro)
+   ========================================== */
+:root,
+[data-theme="cyber"] {
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1f293d;
+  --bg-glass: rgba(17, 24, 39, 0.75);
+  --bg-overlay: rgba(5, 8, 15, 0.82);
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-subtle: #475569;
+
+  --accent-primary: #38bdf8;
+  --accent-secondary: #818cf8;
+  --accent-glow: rgba(56, 189, 248, 0.35);
+
+  --color-correct: #38bdf8;
+  --color-incorrect: #f43f5e;
+  --color-extra: #fb7185;
+  --color-cursor: #38bdf8;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(56, 189, 248, 0.5);
+  --card-bg: rgba(17, 24, 39, 0.85);
+
+  --keyboard-bg: #0f172a;
+  --keyboard-key-bg: #1e293b;
+  --keyboard-key-text: #cbd5e1;
+  --keyboard-key-active: #38bdf8;
+  --keyboard-key-active-text: #04101e;
+  --keyboard-key-shadow: #020617;
+
+  --badge-bg: rgba(56, 189, 248, 0.12);
+  --badge-text: #38bdf8;
+}
+
+/* ==========================================
+   THEME 2: Matrix Emerald (Terminal Hacker)
+   ========================================== */
+[data-theme="matrix"] {
+  --bg-primary: #060d09;
+  --bg-secondary: #0c1810;
+  --bg-tertiary: #142a1c;
+  --bg-glass: rgba(12, 24, 16, 0.8);
+  --bg-overlay: rgba(4, 9, 6, 0.85);
+
+  --text-main: #ecfdf5;
+  --text-muted: #6ee7b7;
+  --text-subtle: #065f46;
+
+  --accent-primary: #10b981;
+  --accent-secondary: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.4);
+
+  --color-correct: #10b981;
+  --color-incorrect: #ef4444;
+  --color-extra: #f87171;
+  --color-cursor: #34d399;
+
+  --border-color: rgba(16, 185, 129, 0.18);
+  --border-focus: rgba(16, 185, 129, 0.6);
+  --card-bg: rgba(12, 24, 16, 0.9);
+
+  --keyboard-bg: #07120a;
+  --keyboard-key-bg: #0f2416;
+  --keyboard-key-text: #a7f3d0;
+  --keyboard-key-active: #10b981;
+  --keyboard-key-active-text: #021a0f;
+  --keyboard-key-shadow: #030805;
+
+  --badge-bg: rgba(16, 185, 129, 0.15);
+  --badge-text: #10b981;
+}
+
+/* ==========================================
+   THEME 3: Sunset Crimson (Amber & Coral)
+   ========================================== */
+[data-theme="sunset"] {
+  --bg-primary: #150d18;
+  --bg-secondary: #221427;
+  --bg-tertiary: #341e3b;
+  --bg-glass: rgba(34, 20, 39, 0.8);
+  --bg-overlay: rgba(13, 8, 15, 0.85);
+
+  --text-main: #fff1f2;
+  --text-muted: #fda4af;
+  --text-subtle: #881337;
+
+  --accent-primary: #fb7185;
+  --accent-secondary: #f43f5e;
+  --accent-glow: rgba(251, 113, 133, 0.4);
+
+  --color-correct: #fb7185;
+  --color-incorrect: #fbbf24;
+  --color-extra: #f59e0b;
+  --color-cursor: #fb7185;
+
+  --border-color: rgba(251, 113, 133, 0.2);
+  --border-focus: rgba(251, 113, 133, 0.6);
+  --card-bg: rgba(34, 20, 39, 0.9);
+
+  --keyboard-bg: #130b16;
+  --keyboard-key-bg: #29172f;
+  --keyboard-key-text: #fecdd3;
+  --keyboard-key-active: #fb7185;
+  --keyboard-key-active-text: #2a050e;
+  --keyboard-key-shadow: #0a040b;
+
+  --badge-bg: rgba(251, 113, 133, 0.15);
+  --badge-text: #fb7185;
+}
+
+/* ==========================================
+   THEME 4: Nord Frost (Arctic Clean Slate)
+   ========================================== */
+[data-theme="nord"] {
+  --bg-primary: #242933;
+  --bg-secondary: #2e3440;
+  --bg-tertiary: #3b4252;
+  --bg-glass: rgba(46, 52, 64, 0.85);
+  --bg-overlay: rgba(26, 30, 38, 0.85);
+
+  --text-main: #eceff4;
+  --text-muted: #d8dee9;
+  --text-subtle: #616e88;
+
+  --accent-primary: #88c0d0;
+  --accent-secondary: #81a1c1;
+  --accent-glow: rgba(136, 192, 208, 0.35);
+
+  --color-correct: #88c0d0;
+  --color-incorrect: #bf616a;
+  --color-extra: #d08770;
+  --color-cursor: #88c0d0;
+
+  --border-color: rgba(236, 239, 244, 0.12);
+  --border-focus: rgba(136, 192, 208, 0.6);
+  --card-bg: rgba(46, 52, 64, 0.92);
+
+  --keyboard-bg: #1e222a;
+  --keyboard-key-bg: #353b49;
+  --keyboard-key-text: #e5e9f0;
+  --keyboard-key-active: #88c0d0;
+  --keyboard-key-active-text: #1d252c;
+  --keyboard-key-shadow: #14171d;
+
+  --badge-bg: rgba(136, 192, 208, 0.18);
+  --badge-text: #88c0d0;
+}
+
+/* ==========================================
+   THEME 5: Modern Light Mode (Clean Executive)
+   ========================================== */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e2e8f0;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-overlay: rgba(15, 23, 42, 0.6);
+
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-subtle: #94a3b8;
+
+  --accent-primary: #2563eb;
+  --accent-secondary: #4f46e5;
+  --accent-glow: rgba(37, 99, 235, 0.25);
+
+  --color-correct: #16a34a;
+  --color-incorrect: #dc2626;
+  --color-extra: #ea580c;
+  --color-cursor: #2563eb;
+
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-focus: rgba(37, 99, 235, 0.5);
+  --card-bg: #ffffff;
+
+  --keyboard-bg: #f1f5f9;
+  --keyboard-key-bg: #ffffff;
+  --keyboard-key-text: #1e293b;
+  --keyboard-key-active: #2563eb;
+  --keyboard-key-active-text: #ffffff;
+  --keyboard-key-shadow: #cbd5e1;
+
+  --badge-bg: rgba(37, 99, 235, 0.1);
+  --badge-text: #2563eb;
+}
